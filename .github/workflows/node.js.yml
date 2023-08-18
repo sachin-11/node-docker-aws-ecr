@@ -21,7 +21,7 @@ jobs:
 
       - name: Login to Amazon ECR
         run: |
-          echo ${{ secrets.AWS_ECR_REGISTRY_URL }} | docker login -u AWS --password-stdin https://${{ secrets.AWS_ECR_REGISTRY_URL }}
+          echo ${{ secrets.AWS_ECR_REGISTRY_URL }} | docker login -u AWS --password-stdin ${{ secrets.AWS_ECR_REGISTRY_URL }}
 
       - name: Build and push Docker image
         run: |
