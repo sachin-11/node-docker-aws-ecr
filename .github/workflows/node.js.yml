@@ -20,10 +20,9 @@ jobs:
           aws-region: ap-south-1
 
       - name: Login to Amazon ECR
-        run: aws ${{ secrets.AWS_ECR_REGISTRY_URL }} | docker login -u AWS --password-stdin ${{ secrets.AWS_REGISTRY }}
-
+        run: aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 529484595314.dkr.ecr.ap-south-1.amazonaws.com
       - name: Build and push Docker image
         run: |
-          docker build -t sachin-demo .
-          docker tag sachin-demo:latest 529484595314.dkr.ecr.ap-south-1.amazonaws.com/sachin-demo-ecr:latest
-          docker push 529484595314.dkr.ecr.ap-south-1.amazonaws.com/sachin-demo:latest
+          docker build -t sachin-demo-ecr .
+          docker tag sachin-demo-ecr:latest 529484595314.dkr.ecr.ap-south-1.amazonaws.com/sachin-demo-ecr:latest
+          docker push 529484595314.dkr.ecr.ap-south-1.amazonaws.com/sachin-demo-ecr:latest
