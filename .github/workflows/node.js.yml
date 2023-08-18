@@ -20,8 +20,7 @@ jobs:
           aws-region: ap-south-1
 
       - name: Login to Amazon ECR
-        run: |
-          echo ${{ secrets.AWS_ECR_REGISTRY_URL }} | docker login -u AWS --password-stdin ${{ secrets.AWS_ECR_REGISTRY_URL }}
+        run: aws ${{ secrets.AWS_ECR_REGISTRY_URL }} | docker login -u AWS --password-stdin ${{ secrets.AWS_REGISTRY }}
 
       - name: Build and push Docker image
         run: |
