@@ -25,6 +25,5 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t sachin-demo .
-          docker tag my-node-app:latest ${{ secrets.AWS_ECR_REGISTRY_URL }}/my-node-app:latest
+          docker tag my-node-app:latest ${{ secrets.AWS_ECR_REGISTRY_URL }}/sachin-demo:latest
           docker push ${{ secrets.AWS_ECR_REGISTRY_URL }}/sachin-demo:latest
-
