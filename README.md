@@ -8,7 +8,7 @@ Docker: Install Docker on your local machine by following the official Docker in
 Getting Started
 Clone this repository to your local machine:
 
-git clone https://github.com/your-username/nodejs-docker-ecr-demo.git
+git clone https://github.com/sachin-11/nodejs-docker-ecr-demo.git
 cd nodejs-docker-ecr-demo
 
 
@@ -25,7 +25,7 @@ Clone this repository to your local machine:
 
 bash
 Copy code
-git clone https://github.com/your-username/nodejs-docker-ecr-demo.git
+git clone https://github.com/sachin-11/nodejs-docker-ecr-demo.git
 cd nodejs-docker-ecr-demo
 Build the Docker image:
 
