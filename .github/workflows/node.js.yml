@@ -26,3 +26,6 @@ jobs:
           docker build -t sachin-demo-ecr .
           docker tag sachin-demo-ecr:latest 529484595314.dkr.ecr.ap-south-1.amazonaws.com/sachin-demo-ecr:latest
           docker push 529484595314.dkr.ecr.ap-south-1.amazonaws.com/sachin-demo-ecr:latest
+          docker pull 529484595314.dkr.ecr.ap-south-1.amazonaws.com/sachin-demo-ecr:latest
+          docker run -p 3000:3000 -d 529484595314.dkr.ecr.ap-south-1.amazonaws.com/sachin-demo-ecr:latest
+
